@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhea & Azhar Wedding</title>
+
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+    <!-- Firebase Realtime Database -->
+  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-database-compat.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="overflow-hidden">
+   <section id="openner" class="d-flex justify-content-center align-items-center" data-aos="fade-down">
+      <div class="container text-center">
+        <div class="text-group-top">
+          <h4 class="top-heading-openner">THE WEDDING OF</h4>
+          <h1 class="heading-openner">Dhea & Azhar</h1>
+        </div>
+        <div class="text-group-bottom text-center mx-auto mt-4">
+          <p>Kepada Bapak/Ibu/Saudara/i</p>
+          <h2 class="fw-bolder text-capitalize" id="receiver"></h2>
+          <p>Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir pada acara pernikahan kami.</p>
+          <button class="btn btn-primary d-flex mx-auto fw-bold mt-5" id="open-message">
+            <i data-feather="mail" class="me-2"></i>Buka Undangan
+          </button>
+        </div>
+      </div>
+    </section> 
+    <section id="jumbotron">
+      <div class="container-fluid d-flex justify-content-center align-items-center flex-column position-relative">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12">
+            <img src="assets/img/jumbotron-text.png" alt="" class="text-header img-fluid" data-aos="zoom-in" />
+          </div>
+        </div>
+        <img src="assets/img/mandala-jumbo-center.svg" alt="" class="header-decoration-center img-fluid" />
+        <img src="assets/img/mandala-jumbo-1.png" alt="" class="header-decoration-left img-fluid" />
+        <img src="assets/img/mandala-jumbo-1.png" alt="" class="header-decoration-right img-fluid" />
+      </div>
+    </section>
+    <section id="pengantin" class="position-relative">
+      <img src="assets/img/divider-1.png" class="first-divider" />
+      <div class="container">
+        <div class="heading-title text-center" data-aos="fade-up">
+          <img src="assets/img/decoration-top.svg" class="img-fluid" />
+          <h3>Assalammu'alaikum Wr. Wb.</h3>
+        </div>
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-md-8 col-11">
+            <p class="text-white text-center">
+              Dengan memohon Rahmat Allah SWT kami bermaksud mengundang Bapak/Ibu/Saudara/i
+              pada Acara Pernikahan kami.
+            </p>
+          </div>
+        </div>
+        <div class="row text-center justify-content-center">
+          <div class="col-md-5" data-aos="fade-right" data-aos-offset="300">
+            <div class="wrapper-foto position-relative">
+              <img src="assets/img/pengantin-2.jpg" class="rounded-circle img-fluid foto-pengantin" />
+              <img src="assets/img/mandala-jumbo-1.png" class="img-fluid bg-pengantin" />
+            </div>
+            <div class="nama-pengantin d-flex flex-column align-items-center">
+              <h2>Dhea</h2>
+              <h3>Ulvia Rahmatwati, S.Farm</h3>
+  <div class="instagram-link mt-3">
+    <a href="https://www.instagram.com/dheaallatiff" class="d-flex align-items-center text-decoration-none text-white">
+      <i class="fab fa-instagram fa-2x me-2"></i>
+      <span>@Dheaallatiff</span>
+    </a>
+  </div>
+              <div class="deskripsi-box text-center">
+                <p>
+                  <span class="fw-bold">Putri dari pasangan</span><br />Bapak Alm. Adnan Latif <br />&<br />
+                  Ibu Juliana, S.Pd
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-offset="300">
+            <h1 class="middle-pengantin">&</h1>
+          </div>
+          <div class="col-md-5" data-aos="fade-left" data-aos-offset="300">
+            <div class="wrapper-foto position-relative">
+              <img src="assets/img/pengantin-1.jpg" class="rounded-circle img-fluid foto-pengantin" />
+              <img src="assets/img/mandala-jumbo-1.png" class="img-fluid bg-pengantin" />
+            </div>
+            <div class="nama-pengantin d-flex flex-column align-items-center">
+              <h2>Azhar</h2>
+              <h3>Rahmad Azhar Setiawan, S.H</h3>
+                <div class="instagram-link mt-3">
+    <a href="https://www.instagram.com/rahmadazhars" class="d-flex align-items-center text-decoration-none text-white">
+      <i class="fab fa-instagram fa-2x me-2"></i>
+      <span>@Rahmadazhars</span>
+    </a>
+  </div>
+              <div class="deskripsi-box text-center">
+                <p>
+                  <span class="fw-bold">Putra dari pasangan</span><br />
+                  Bapak. Alm. Selamat <br />&<br />
+                  Ibu Misriati
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-center text-center flex-column align-items-center mepandes position-relative">
+          <div class="col d-flex flex-column justify-content-center align-items-center orang-mepandes" data-aos="fade-left">
+                   <div class="heading-title text-center mb-4 mt-5" data-aos="fade-up">
+          <img src="assets/img/decoration-top.svg" class="img-fluid" />
+          <h3>Ayat Pernikahan</h3>
+        </div>
+            <h3 class="nama-mepandes fs-5">
+وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
+
+<br /><br />Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, <br />supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. <br />Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.
+<br />
+QS. Ar-Rum 21
+            </h3>
+            <div class="deskripsi-box border-description text-center justify-content-center">
+              
+            </div>
+          </div>
+          <div class="col d-flex flex-column justify-content-center align-items-center mt-2 orang-mepandes" data-aos="fade-left">
+           
+          </div>
+          
+          <img src="assets/img/mandala-jumbo-1.png" class="position-absolute img-fluid bg-mepandes" />
+        </div>
+      </div>
+      <img src="assets/img/divider-2.png" class="second-divider" />
+    </section>
+    <section id="hari-bahagia">
+      <div class="container" data-aos="fade-up">
+        <div class="heading-title text-center">
+          <img src="assets/img/decoration-top.svg" class="img-fluid" />
+          <h3>HARI BAHAGIA</h3>
+        </div>
+        <div class="row waktu justify-content-center">
+          <div class="col-lg-2 col-3">
+            <div class="waktu-wrapper text-center">
+              <h2 class="angka-waktu hari">00</h2>
+              <p class="ket-waktu">HARI</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-3">
+            <div class="waktu-wrapper text-center">
+              <h2 class="angka-waktu jam">00</h2>
+              <p class="ket-waktu">JAM</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-3">
+            <div class="waktu-wrapper text-center">
+              <h2 class="angka-waktu menit">00</h2>
+              <p class="ket-waktu">MENIT</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-3">
+            <div class="waktu-wrapper text-center">
+              <h2 class="angka-waktu detik">00</h2>
+              <p class="ket-waktu">DETIK</p>
+            </div>
+          </div>
+        </div>
+        <img src="assets/img/dekorasi-waktu.svg" class="text-center img-fluid dekorasi-waktu" />
+      </div>
+    </section>
+    <section id="location">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 detail-lokasi">
+            <div class="container mt-3" data-aos="fade-right">
+              <div class="heading-title text-center">
+                <img src="assets/img/decoration-top.svg" class="img-fluid" />
+                <h3>AKAD NIKAH</h3>
+              </div>
+              <div class="row text-white text-center justify-content-center align-items-center flex-column pb-4">
+                <div class="col-sm-7">
+                  <p class="deskripsi-lokasi">
+                    <i data-feather="calendar" class="me-1"></i>Hari/Tanggal :<br />
+                                
+                                       <h2 class="waktu ket-waktu mt-3">Jum'at</h2>
+                                   <h2 class="waktu angka-waktu">09</h2>
+              <h2 class="waktu ket-waktu">Agustus 2024</h2>
+                    <span class="fw-bold"
+                      > 10.00 WIB - Selesai</span
+                    >
+                  </p>
+                </div>
+                <div class="col-sm-7">
+                  <p class="deskripsi-lokasi">
+                    <i data-feather="map-pin"></i> Lokasi Akad Nikah :<br />
+                    <span class="fw-bold"
+                      >Masjid Ba'alawi
+                      <br />
+                      Aceh Timur - Aceh
+                    </span>
+                  </p>
+
+                 
+                 
+                </div>
+              </div>
+            </div>
+
+            <div class="container mt-3" data-aos="fade-right">
+              <div class="heading-title text-center">
+                <img src="assets/img/decoration-top.svg" class="img-fluid" />
+                <h3>RESEPSI</h3>
+              </div>
+              <div class="row text-white text-center justify-content-center align-items-center flex-column pb-4">
+                <div class="col-sm-7">
+                  <p class="deskripsi-lokasi">
+                    <i data-feather="calendar" class="me-1"></i>Hari/Tanggal :<br />
+   <h2 class="waktu ket-waktu mt-3">Sabtu</h2>
+                                   <h2 class="waktu angka-waktu">10</h2>
+              <h2 class="waktu ket-waktu">Agustus 2024</h2>
+
+                    <span class="fw-bold"
+                      >
+                      10.00 WIB - Selesai</span
+                    >
+                  </p>
+                </div>
+                <div class="col-sm-7">
+                  <p class="deskripsi-lokasi">
+                    <i data-feather="map-pin"></i> Lokasi Resepsi :<br />
+                    <span class="fw-bold"
+                      >Dusun Cot Hagu, Desa Putoh Sa, Kec. Pante Bidari
+                      <br />
+                      Aceh Timur - Aceh
+                    </span>
+                  </p>
+
+                 
+                  <a href="https://maps.app.goo.gl/qURRbjeHgt85P62o6" class="btn btn-primary rounded-pill fw-bold" target="_blank"
+                    >PETA LOKASI</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 g-0" data-aos="fade-left">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1987.0038410547038!2d97.47870799054677!3d5.10245627589876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMDYnMDkuMSJOIDk3wrAyOCc0Ni4yIkU!5e0!3m2!1sid!2ssg!4v1722019942874!5m2!1sid!2ssg"
+              width="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="maps"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <section id="foto-nikah" class="position-relative pb-5">
+      <img src="assets/img/divider-1.png" class="first-divider" />
+      <div class="container pt-5 pb-5">
+        <div class="d-flex justify-content-center" data-aos="fade-down">
+          <img src="assets/img/decoration-foto.svg" class="decor-foto-nikah img-fluid" />
+        </div>
+        <h3 class="heading-foto" data-aos="fade-down">MOMENT BAHAGIA</h3>
+        <div class="row mt-3 justify-content-center">
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-left">
+            <a href="assets/img/photo-1.jpg" data-fancybox="gallery">
+              <img src="assets/img/photo-1.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-2.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-2.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-left">
+            <a href="assets/img/photo-3.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-3.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-4.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-4.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-5.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-5.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-6.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-6.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-7.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-7.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-8.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-8.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-9.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-9.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+                    <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-10.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-10.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+                              <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-11.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-11.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+                              <div class="col-md-3 col-sm-4 col-8 g-2" data-aos="fade-right">
+            <a href="assets/img/photo-12.jpg" data-fancybox="gallery" ">
+              <img src="assets/img/photo-12.jpg" class="aspect-ratio-1 img-fluid" width="100%" />
+            </a>
+          </div>
+          <div class="d-flex justify-content-center" data-aos="fade-up">
+            <img src="assets/img/decoration-foto.svg" class="decor-foto-nikah rotate-180 mt-4 img-fluid" />
+          </div>
+        </div>
+      </div>
+      <img src="assets/img/divider-2.png" class="second-divider" />
+    </section>
+    <section id="protokol-kesehatan">
+      <div class="container" data-aos="fade-up">
+        <div class="heading-title text-center">
+          <img src="assets/img/decoration-top.svg" class="img-fluid" />
+          <h3>KIRIM KADO</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-11">
+            <p class="text-center">
+Terima kasih atas doa dan restu yang telah anda berikan, jika anda ingin mengirimkan kado nikah, silahkan kirim dengan cara dibawah ini. Sebelumnya, kami mengucapkan banyak terima kasih.            </p>
+          </div>
+<div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up">
+            <div class="text-center card-undangan hover">
+                <img src="https://cdn3.iconfinder.com/data/icons/banks-in-indonesia-logo-badge/100/BCA-512.png" class="img-fluid w-50" alt="">
+            </div>
+            <input type="text" value="7780158438" id="myInput2" hidden>
+
+            <div class="text-center">
+                <strong>Nama Bank</strong>
+                <p class="text-center">Bank Central Asia</p>
+                <strong>Nama Rekening</strong>
+                <p class="text-center">ULVIA RAHMAWATI</p>
+                <strong>Nomor Rekening</strong>
+                <p class="text-center">7780158438</p>
+                <button class="btn btn-primary" onclick="myFunction2()"><i data-feather="copy"></i> Salin Nomor Rekening</button>
+            </div>
+        </div>
+        <script>
+    function myFunction2() {
+        var copyText = document.getElementById("myInput2");
+        copyText.removeAttribute("hidden");  // Show the input temporarily
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'disalin' : 'tidak berhasil';
+            alert('Rekening telah berhasil ' + msg);
+        } catch (err) {
+            alert('Oops, gagal di salin');
+        }
+
+        copyText.setAttribute("hidden", true);  // Hide the input again
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        feather.replace();
+    });
+</script>
+ <div class="col-md-6 col-lg-4 mb-3" data-aos="fade-up">
+            <div class="text-center card-undangan hover">
+                <img src="https://cdn3.iconfinder.com/data/icons/banks-in-indonesia-logo-badge/100/BRI-512.png" class="img-fluid w-50" alt="">
+            </div>
+            <input type="text" value="222701009933501" id="myInput3" hidden>
+
+            <div class="text-center">
+                <strong>Nama Bank</strong>
+                <p class="text-center">Bank Rakyat Indonesia</p>
+                <strong>Nama Rekening</strong>
+                <p class="text-center">RAHMAD AZHAR SETIAWAN</p>
+                <strong>Nomor Rekening</strong>
+                <p class="text-center">222701009933501 </p>
+                <button class="btn btn-primary" onclick="myFunction2()"><i data-feather="copy"></i> Salin Nomor Rekening</button>
+            </div>
+        </div>
+        <script>
+    function myFunction2() {
+        var copyText = document.getElementById("myInput3");
+        copyText.removeAttribute("hidden");  // Show the input temporarily
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'disalin' : 'tidak berhasil';
+            alert('Rekening telah berhasil ' + msg);
+        } catch (err) {
+            alert('Oops, gagal di salin');
+        }
+
+        copyText.setAttribute("hidden", true);  // Hide the input again
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        feather.replace();
+    });
+</script>
+        <img src="assets/img/dekorasi-waktu.svg" class="text-center img-fluid dekorasi-waktu mt-3" />
+      </div>
+    </section>
+    <section id="pesan" class="position-relative pb-3">
+      <img src="assets/img/divider-1.png" class="first-divider" />
+      <div class="heading-title text-center" data-aos="fade-left">
+        <img src="assets/img/decoration-top.svg" class="img-fluid" />
+        <h3>PESAN & HARAPAN</h3>
+      </div>
+      <div class="container">
+        <div class="card-body border rounded-4 shadow p-3">
+          
+            <div class="mb-1" id="response"></div>
+
+            <div class="mb-3">
+                <label for="form-name" class="form-label">Nama</label>
+                <input type="text" class="form-control shadow-sm" id="form-name" placeholder="Isikan Nama Anda">
+            </div>
+
+            <div class="mb-3">
+                <label for="form-presence" class="form-label" id="label-attendance">Kehadiran</label>
+                <select class="form-select shadow-sm" id="form-presence">
+
+                    <option value="1" selected>Hadir</option>
+                    <option value="2">Berhalangan</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+              
+             
+                <textarea class="form-control shadow-sm" id="form-comment" rows="4" placeholder="Tulis Ucapan & Doa"></textarea>
+            </div>
+
+            <div class="d-grid">
+                <button class="btn btn-primary btn-sm rounded-3 shadow m-1" onclick="util.comment.send(this)">
+                    <i data-feather="send" class="me-1"></i>Kirim
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-4 mb-2" id="comments"></div>
+
+        <nav class="d-flex justify-content-center mb-0">
+            <ul class="pagination mb-0">
+                <li class="page-item disabled" id="previous">
+                    <button class="page-link" onclick="pagination.previous(this)">
+                        <i class="fa-solid fa-circle-left me-1"></i>Previous
+                    </button>
+                </li>
+                <li class="page-item disabled">
+                    <span class="page-link text-light" id="page">1</span>
+                </li>
+                <li class="page-item" id="next">
+                    <button class="page-link" onclick="pagination.next(this)">
+                        Next<i class="fa-solid fa-circle-right ms-1"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+      <div class="row justify-content-center align-items-center text-center text-white mb-3 mt-4">
+        <p class="fw-bolder">                 Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i.
+                    berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih. </br>Kami Yang berbahagia :</p>
+        <a href="https://wa.me/6285275093909" target="_blank">
+          <img src="assets/img/logo-semat.svg" class="img-fluid logo-semat" />
+        </a>
+      </div>
+    </section>
+    <div class="music-icon"><i data-feather="music"></i></div>
+    <footer class="d-flex justify-content-center align-items-center">
+      <p class="fw-bolder text-black">Created with <i data-feather="heart"></i> by Anggun Photo 2</p>
+    </footer>
+    <audio src="assets/music/fell_with_love.mp3"></audio>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+    <script src="openner.js"></script>
+    <script src="message.js"></script>
+    <script src="countdown.js"></script>
+    <script src="music.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 800,
+      });
+    </script>
+
+
+
+
+
+
+    </main>
+
+    
+    <!-- Theme Button -->
+    <button type="button" id="button-theme" style="display: none;" class="btn bg-dark border border-2 btn-sm rounded-circle btn-theme" onclick="theme.change()">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+    </button>
+
+    <!-- Audio Button -->
+    <button type="button" id="button-music" style="display: none;" class="btn bg-dark border border-2 btn-sm rounded-circle btn-music" onclick="audio.button(this)" data-status="true" data-url="./assets/music/sound.mp3">
+        <i class="fa-solid fa-circle-pause spin-button"></i>
+    </button>
+                  
+    <!-- Modal Image Large -->
+    <div class="modal fade" id="modal-image" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-4">
+                <div class="modal-body p-0">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <img src="./assets/images/bg.jpeg" class="w-100" alt="image" id="show-modal-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                  
+  </div>
+  
+  
+  <!-- Loading page -->
+    
+                  
+                  
+                  
+  <script>
+      function updateProgress(percentage, info) {
+        const progressBar = document.getElementById('progress-bar');
+        const progressInfo = document.getElementById('progress-info');
+
+        progressBar.style.width = percentage + '%';
+
+        if (info) {
+            progressInfo.style.display = 'block';
+            progressInfo.textContent = info;
+        }
+    }
+
+    function hideLoadingPage() {
+        const loadingPage = document.getElementById('loading');
+        loadingPage.style.opacity = '0';
+        setTimeout(() => {
+            loadingPage.style.display = 'none';
+        }, 500);
+    }
+
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        if (progress < 100) {
+            progress += 10;
+            updateProgress(progress, `Loading ${progress}%...`);
+        } else {
+            clearInterval(progressInterval);
+            updateProgress(100, 'Done!');
+            setTimeout(hideLoadingPage, 1000);
+        }
+    }, 500);
+                  
+                  
+                  
+const util = {
+    
+    open: async function(button) {
+        const invitation = document.getElementById('invitation');        
+        const welcome = document.getElementById('welcome');
+        const body = document.body;
+        const dataKey = body.getAttribute('data-key');
+
+        console.log('Data Key:', dataKey);
+
+        invitation.style.display = 'block';
+        welcome.style.display = 'none';
+        button.disabled = true;
+        confetti({
+            origin: { y: 1 },
+            zIndex: 1057
+        });
+
+        AOS.init({
+            duration: 3000, // Animation duration in milliseconds
+            once: false, // Animation happens only once
+        });
+        AOS.refresh(); // Ensure AOS is refreshed
+    },
+                  
+   
+    animate: function(svg, timeout, classes) {
+        let handler = setTimeout(() => {
+            svg.classList.add(classes);
+            clearTimeout(handler); // Clear the timeout to avoid memory leaks
+        }, timeout);
+    },
+
+    countDownDate: function() {
+        const until = document.getElementById('count-down').getAttribute('data-time').replace(' ', 'T');
+        const count = (new Date(until)).getTime();
+
+        setInterval(() => {
+            const distance = Math.abs(count - (new Date()).getTime());
+
+            document.getElementById('day').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById('hour').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('minute').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('second').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
+    },
+
+    opacity: function(id, speed = 0.01) {
+        const element = document.getElementById(id);
+        let op = parseInt(element.style.opacity);
+
+        let clear = null;
+        clear = setInterval(() => {
+            if (op > 0) {
+                element.style.opacity = op.toString();
+                op -= speed;
+            } else {
+                clearInterval(clear);
+                clear = null;
+                element.remove();
+            }
+        }, 10);
+    },
+
+    escapeHtml: function(unsafe) {
+        return unsafe
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    },
+
+    disableButton: function(button, message = 'Loading..') {
+        button.disabled = true;
+        let tmp = button.innerHTML;
+        button.innerHTML = message;
+
+        const restore = () => {
+            button.innerHTML = tmp;
+            button.disabled = false;
+        };
+
+        return {
+            restore,
+        };
+    },
+
+    
+
+    show: function() {
+        util.guest();
+        util.opacity('loading', 0.025);
+        window.scrollTo(0, 0);
+    },
+
+    modal: function(img) {
+        document.getElementById('show-modal-image').src = img.src;
+        (new bootstrap.Modal('#modal-image')).show();
+    },
+
+    copy: async function(button, message, timeout = 1500) {
+        try {
+            await navigator.clipboard.writeText(button.getAttribute('data-copy'));
+        } catch {
+            alert('Failed to copy');
+            return;
+        }
+
+        button.disabled = true;
+        let tmp = button.innerText;
+        button.innerText = message;
+
+        let clear = null;
+        clear = setTimeout(() => {
+            button.disabled = false;
+            button.innerText = tmp;
+
+            clearTimeout(clear);
+            clear = null;
+            return;
+        }, timeout);
+    },
+
+    animation: function() {
+        const duration = 15 * 1000;
+        const animationEnd = Date.now() + duration;
+        const colors = ["#FFC0CB", "#FF1493", "#C71585"];
+
+        const randomInRange = (min, max) => {
+            return Math.random() * (max - min) + min;
+        };
+
+        const heart = confetti.shapeFromPath({
+            path: 'M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z',
+            matrix: [0.03333333333333333, 0, 0, 0.03333333333333333, -5.566666666666666, -5.533333333333333]
+        });
+
+        (function frame() {
+            const timeLeft = animationEnd - Date.now();
+
+            colors.forEach((color) => {
+                confetti({
+                    particleCount: 1,
+                    startVelocity: 0,
+                    ticks: Math.max(50, 75 * (timeLeft / duration)),
+                    origin: {
+                        x: Math.random(),
+                        y: Math.abs(Math.random() - (timeLeft / duration)),
+                    },
+                    zIndex: 1057,
+                    colors: [color],
+                    shapes: [heart],
+                    drift: randomInRange(-0.5, 0.5),
+                    gravity: randomInRange(0.5, 1),
+                    scalar: randomInRange(0.5, 1),
+                });
+            });
+
+            if (timeLeft > 0) {
+                requestAnimationFrame(frame);
+            }
+          
+        })();
+    },
+    comment: {
+        send: async function(button) {
+            const name = document.getElementById('form-name').value;
+            const presence = document.getElementById('form-presence').value;
+            const commentText = document.getElementById('form-comment').value;
+            if (name && presence && commentText) {
+                const commentData = {
+                    name: name,
+                    presence: presence,
+                    comment: commentText,
+                    replies: {} // Add this line to handle replies
+                };
+                const newCommentKey = firebase.database().ref().child('comments').push().key;
+                const updates = {};
+                updates['/comments/' + newCommentKey] = commentData;
+                await firebase.database().ref().update(updates);
+                document.getElementById('form-name').value = '';
+                document.getElementById('form-presence').value = '0';
+                document.getElementById('form-comment').value = '';
+            } else {
+                alert('Please fill all fields');
+            }
+        },
+        retrieveComments: function() {
+            firebase.database().ref('comments/').on('value', (snapshot) => {
+                const commentsContainer = document.getElementById('comments');
+                commentsContainer.innerHTML = '';
+                const data = snapshot.val();
+                for (let key in data) {
+                    const comment = data[key];
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment mb-3';
+                    commentElement.id = key;
+                    let repliesCount = 0;
+
+                    // Count replies
+                    if (comment.replies) {
+                        repliesCount = Object.keys(comment.replies).length;
+                    }
+
+                    commentElement.innerHTML = `
+                        <div class="card bg-dark border">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: green;">${comment.name}/-<span class="card-subtitle mb-2" style="color: white;">${comment.presence === '1' ? 'Hadir' : 'Berhalangan'}</span></h5>
+                                <p class="card-text" style="color: white;">${comment.comment}</p>
+                                <button class="btn btn-sm btn-outline-primary" onclick="util.comment.reply(this)" data-uuid="${key}">Reply</button>
+                             
+                                <span class="badge bg-secondary" onclick="util.comment.toggleReplies('${key}')">Replies (${repliesCount})</span>
+                                <div id="replies-${key}" class="replies" style="display: none;"></div>
+                            </div>
+                        </div>`;
+                    commentsContainer.appendChild(commentElement);
+
+                    // Retrieve and display replies
+                    if (comment.replies) {
+                        const repliesContainer = document.getElementById(`replies-${key}`);
+                        for (let replyKey in comment.replies) {
+                            const reply = comment.replies[replyKey];
+                            const replyElement = document.createElement('div');
+                            replyElement.className = 'reply mb-2';
+                            replyElement.id = replyKey;
+                            replyElement.innerHTML = `
+                                <div class="card bg-secondary border mt-2">
+                                    <div class="card-body">
+                                        <h6 class="card-title" style="color: lightgreen;">${reply.name}</h6>
+                                        <p class="card-text" style="color: lightgray;">${reply.comment}</p>
+                                        <button class="btn btn-sm btn-outline-danger" onclick="util.comment.removeReply(this)" data-comment="${key}" data-reply="${replyKey}">Remove</button>
+                                    </div>
+                                </div>`;
+                            repliesContainer.appendChild(replyElement);
+                        }
+                    }
+                }
+            });
+        },
+        reply: function(button) {
+            const commentKey = button.getAttribute('data-uuid');
+            const replyName = prompt('Enter your name:');
+            const replyText = prompt('Enter your reply:');
+            if (replyName && replyText) {
+                const replyData = {
+                    name: replyName,
+                    comment: replyText
+                };
+                const newReplyKey = firebase.database().ref().child('comments/' + commentKey + '/replies').push().key;
+                const updates = {};
+                updates['/comments/' + commentKey + '/replies/' + newReplyKey] = replyData;
+                firebase.database().ref().update(updates);
+            }
+        },
+        remove: function(button) {
+            const commentKey = button.getAttribute('data-uuid');
+            if (confirm('Are you sure you want to delete this comment?')) {
+                firebase.database().ref('comments/' + commentKey).remove();
+            }
+        },
+        removeReply: function(button) {
+            const commentKey = button.getAttribute('data-comment');
+            const replyKey = button.getAttribute('data-reply');
+            if (confirm('Are you sure you want to delete this reply?')) {
+                firebase.database().ref(`comments/${commentKey}/replies/${replyKey}`).remove();
+            }
+        },
+        toggleReplies: function(commentKey) {
+            const repliesContainer = document.getElementById(`replies-${commentKey}`);
+            if (repliesContainer.style.display === 'none') {
+                repliesContainer.style.display = 'block';
+            } else {
+                repliesContainer.style.display = 'none';
+            }
+        }
+    }
+   
+};
+
+// Ensure DOM is fully loaded before retrieving comments
+document.addEventListener('DOMContentLoaded', util.comment.retrieveComments);
+
+
+
+
+document.getElementById('open-message').addEventListener('click', () => {
+    const audio = new Audio('./assets/music/sound.mp3');
+    audio.play()
+        .then(() => console.log('Audio is playing'))
+        .catch(error => console.error('Error playing audio:', error));
+});
+
+                  
+// Inisialisasi AOS setelah halaman dimuat
+
+
+window.onload = () => {
+  util.countDownDate();
+};
+                  
+const firebaseConfig = {
+    apiKey: "AIzaSyAK7yU2As3pF6hiVTmQ0fHoyDFTeP-QdqQ",
+    authDomain: "comentundangan.firebaseapp.com",
+    databaseURL: "https://comentundangan-default-rtdb.firebaseio.com",
+    projectId: "comentundangan",
+    storageBucket: "comentundangan.appspot.com",
+    messagingSenderId: "260510872398",
+    appId: "1:260510872398:web:be3f6a0052b71cc427641f",
+    measurementId: "G-8R7YXVTXQ8"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+    
+
+  </script>
+  
+  
+
+                  
+  <!-- Dependencies JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.js" integrity="sha256-mvTaORw+RTgKnX6ZHT4P5Sc9DNP2TBpSGII7F3sT8iE=" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
